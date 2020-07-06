@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> LAYOUT bài 1 </title>
+	<style>
+		*{margin:auto;
+			text-align: center}
+		.head
+		{
+			background-color:#808000;
+		}
+		.a
+		{
+			width:100%;
+			height:40px;
+			border:solid 1px black;
+		}
+		.b
+		{
+			width:20%;
+			height:60px;
+			border:solid 1px black;
+			background-color:#3399CC;
+		}
+		.c
+		{
+			width:60%;
+			background-color:#CCCCCC;
+			border:solid 1px black;
+		}
+		.d
+		{
+			background-color:#FF9900;
+			border:solid 1px black;
+		}
+	</style>
+</head>
+<body>
+	<table  cellspacing="5">
+		<tr class="head" >
+			<td colspan="3" class="a">Header</td>
+		</tr>
+		<tr > 
+			<td class="b">Left</td>
+			<td class="c">Center</td>
+			<td class="b">Right</td>
+		</tr>
+		<tr>
+			<td colspan="3" class="d">Footer</td>
+		</tr>
+	</table>
+</body>
+</html>
