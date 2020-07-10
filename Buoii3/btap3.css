@@ -1,0 +1,71 @@
+*
+{
+	margin:auto;
+	
+}
+body
+{
+	margin-left:100px;
+	margin-right:100px;
+}
+.tong
+{
+	height:700px;
+	border:solid 1px white; 
+	width:1000px;
+	
+}
+.menu
+{
+	width:800px;
+	height:0px;
+	display:flex;
+	text-align: center;
+	position: relative;
+}
+.menu p
+{
+	border:solid 1px black;
+	width:200px;
+	height:50px;
+	text-align:center;
+	line-height:50px;
+	margin:10px;
+	background-color:	#9999FF;
+	z-index: 2; 
+}
+.menu p:hover
+{
+	background-color:pink;
+	cursor:pointer;
+}
+img 
+{
+	margin-top:0px;
+	width:300px;
+	position: relative;
+}
+.doanvan
+{
+	position: absolute;
+	top:0px;
+}
+.gt
+{
+	position: relative;
+	height:475px;
+}
+.footer
+{
+	width:600px; 
+	height:50px;
+	border:solid 1px black;
+	text-align: center;
+	line-height:50px;
+ 	position: relative;
+}
+.footer p
+{
+	z-index: 2; 
+	background-color:pink;
+}
