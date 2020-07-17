@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài tập trang chủ </title>
+	<link rel="stylesheet" href="D:\JAVAWEB2007E\btap.css">
+	<script type="text/javascript" src="F:\esclipse\jq\jquery-3.5.1.min.js"></script>
+	<script >
+
+		//chuyển sline trang chủ 
+		var img=[{"url": "fileimge/sline.png"},
+				{"url" : "fileimge/sline2.png"},
+				{"url" : "fileimge/sline3.png"},
+				];
+		function anh(index)
+		{
+			var url=img[index].url;
+			var imgs=$('#imgsline');
+			imgs.attr('src', url);
+			var menu = $('#menusline');
+			var li = $('#menusline li');
+			for(var i=0; i<li.length; i++)
+			{
+				if(i!=index)
+				{
+					li[i].className="";
+				}
+				else
+				{
+					li[index].className="active";
+				}
+			}
+		}
+
+		var a=0;
+		tc =function ()
+		{
+			var array=[ "fileimge/sline.png",
+					    "fileimge/sline2.png",
+					    "fileimge/sline3.png",
+					  ];
+			document.getElementById('imgsline').src=array[a];
+			a++;
+			if(a==3)
+			{
+				a=0;
+			}
+		}
+		setInterval(tc,2000);
+
+		//chuyển ảnh quảng cáo
+		var i=0;
+		changeimg =function ()
+		{
+			var imgsl=[ "fileimge/hoanghon.jpg",
+					    "fileimge/hoanghon2.jpg",
+					    "fileimge/galaxy.jpg",
+					    "fileimge/hoanghon3.jpg",
+					  ];
+			document.getElementById('imgch').src=imgsl[i];
+			i++;
+			if(i==4)
+			{
+				i=0;
+			}
+		}
+		setInterval(changeimg,1000);
+	</script>
+</head>
+<body>
+	<div class="tong">
+		<div class="header">
+			<div class="banner">
+				<img src="fileimge/logo.png">
+				<img class="anhbanner"src="fileimge/banner.png">
+			</div>
+
+			<div class="menu">
+				<div class="submenu">
+					<ul>
+						<li>Trang chủ </li>
+						<li>Giới thiệu </li>
+						<li>Học HTML</li>
+						<li>Học CSS</li>
+						<li class="menuli"> <a href=" ">Học JQuery</a>
+							<ul class="menucon">
+								<li>Học VueJS</li>
+								<li>Học AngularJS</li>
+								<li>Học ReactJS</li>
+							</ul>
+						</li>
+						<li>Học WordPress</li>
+						<li>Học ReactJS </li>
+						<li>Liên hệ </li>
+					</ul>
+				</div>
+
+				<div class="sline">
+					<div class="slineimg">
+						<img id="imgsline" src="fileimge/sline.png" stt="0">
+						<img id="imgsline" src="fileimge/sline2.png" style="display: none" stt="1">
+						<img id="imgsline" src="fileimge/sline3.png" style="display: none" stt="2">
+					</div>
+					<div class="tiltle">
+						<ul id="menusline">
+							<li class="active" onclick="anh(0)"> </li>
+							<li onclick="anh(1)"> </li>
+							<li onclick="anh(2)"> </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="center">
+			<div class="left">
+				<div class="baiviet">
+					<h2>BÀI VIÊT NỔI BẬT</h2>
+					<img  src="fileimge/baiviet.png" >
+				</div>
+
+				<div class="chuyen">
+					<a href="" >Hướng dẫn chuyển HTML sang WordPress khởi tạo dự án</a>
+					<p>Ngày đăng: 30-09-2019 &nbsp; Lượt xem: 2344 lượt</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum libero unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum libero unde laudantium sapiente atque odio at facere nemo aperiam.</p>
+					<div class="imgchuyen">
+						<div class="chuyen1">
+							<img  src="fileimge/imgchuyen.png" >
+							<a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+							<p>Ngày đăng: 30-09-2019</p>
+						</div>
+						<div class="chuyen1">
+							<img  src="fileimge/imgchuyen3.jpg" >
+							<a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+							<p>Ngày đăng: 30-09-2019</p>
+						</div>
+						<div class="chuyen1">
+							<img  src="fileimge/imgchuyen2.png" >
+							<a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+							<p>Ngày đăng: 30-09-2019</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="moinhat">
+					<h2>BÀI VIẾT MỚI NHẤT</h2>
+					<div class="new">
+						<img src="fileimge/new.png" />
+						<a href="">Bài viết mới nhất của chủ đề hướng dẫn wordpress </a>
+						<p>Ngày đăng: 30-09-2019</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</div>
+					<hr>
+					<div class="new">
+						<img src="fileimge/new.png" />
+						<a href="">Bài viết mới nhất của chủ đề hướng dẫn wordpress </a>
+						<p>Ngày đăng: 30-09-2019</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</div>
+					<hr>
+					<div class="new">
+						<img src="fileimge/new.png" />
+						<a href="">Bài viết mới nhất của chủ đề hướng dẫn wordpress </a>
+						<p>Ngày đăng: 30-09-2019</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</div>
+					<hr>
+					<div class="new">
+						<img src="fileimge/new.png" />
+						<a href="">Bài viết mới nhất của chủ đề hướng dẫn wordpress </a>
+						<p>Ngày đăng: 30-09-2019</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</div>
+					<hr>
+					<div class="new">
+						<img src="fileimge/new.png" />
+						<a href="">Bài viết mới nhất của chủ đề hướng dẫn wordpress </a>
+						<p>Ngày đăng: 30-09-2019</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</div>
+					<hr>
+					<div class="new">
+						<img src="fileimge/new.png" />
+						<a href="">Bài viết mới nhất của chủ đề hướng dẫn wordpress </a>
+						<p>Ngày đăng: 30-09-2019</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</div>
+					<hr>
+					<div class="new">
+						<img src="fileimge/new.png" />
+						<a href="">Bài viết mới nhất của chủ đề hướng dẫn wordpress </a>
+						<p>Ngày đăng: 30-09-2019</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</div>
+					<hr>
+					<div class="new">
+						<img src="fileimge/new.png" />
+						<a href="">Bài viết mới nhất của chủ đề hướng dẫn wordpress </a>
+						<p>Ngày đăng: 30-09-2019</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</div>
+					<hr>
+					<div class="new">
+						<img src="fileimge/new.png" />
+						<a href="">Bài viết mới nhất của chủ đề hướng dẫn wordpress </a>
+						<p>Ngày đăng: 30-09-2019</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</div>
+					<hr>
+					<div class="new">
+						<img src="fileimge/new.png" />
+						<a href="">Bài viết mới nhất của chủ đề hướng dẫn wordpress </a>
+						<p>Ngày đăng: 30-09-2019</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</div>
+					<hr>
+					<div class="so">
+						<a href="">1</a>
+						<a href="">2</a>
+						<a href="">3</a>
+						<a href="">...</a>
+						<a href="">4</a>
+						<a href="">5</a>
+						<a href="">6</a>
+						<a href="">Tiếp theo</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="right">
+				<div class="chuyenmuc">
+					<h4>CHUYÊN MỤC</h4>
+					<a href=""> &#62; Học WordPress(152)</a>
+					<a href=""> &#62; Học HTML (52)</a>
+					<a href=""> &#62; Học CSS(15)</a>
+					<a href=""> &#62; Học JQuery(7)</a>
+					<a href=""> &#62; Học React Native (8)</a>
+					<a href=""> &#62; Chủ đề khác (10)</a>
+				</div>
+				<div class="bviet">
+					<h4>BÀI VIẾT MỚI </h4>
+					<div class="gt">
+						<img src="fileimge/tron.jpg">
+						<a href="">7 kênh youtube học lập trình web tốt nhất thế giới giúp bạn nâng cao kỹ năng</a>
+						<p>Ngày đăng: 22-02-2012</p>
+					</div>
+					<hr>
+					<div class="gt">
+						<img src="fileimge/tron.jpg">
+						<a href="">Học HTML & CSS, học front end thông qua dự án thực tế</a>
+						<p>Ngày đăng: 22-02-2012</p>
+					</div>
+					<hr>
+					<div class="gt">
+						<img src="fileimge/tron.jpg">
+						<a href="">5 frameworks frontend miễn phí tốt nhất cho dự án web của bạn</a>
+						<p>Ngày đăng: 22-02-2012</p>
+					</div>
+					<hr>
+					<div class="gt">
+						<img src="fileimge/tron.jpg">
+						<a href="">Những đoạn code hay dùng trong lập trình theme woocommecre wordpressg</a>
+						<p>Ngày đăng: 22-02-2012</p>
+					</div>
+					<hr>
+					<div class="gt">
+						<img src="fileimge/tron.jpg">
+						<a href="">Share plugin get bài viết từ 10 trang báo nổi tiếng của Việt Nam</a>
+						<p>Ngày đăng: 22-02-2012</p>
+					</div>
+					<hr>
+				</div>
+				<div class="xemnhieu">
+					<h4>BÀI VIẾT XEM NHIỀU </h4>
+					<div class="xem1">
+						<p>1</p>
+						<a href="">Download file psd background chương trình, hội nghị</a>
+					</div>
+					<hr>
+					<div class="xem1">
+						<p>2</p>
+						<a href="">Download miễn phí phần mềm Adobe indesign CS4 & CS5</a>
+					</div>
+					<hr>
+					<div class="xem1">
+						<p>3</p>
+						<a href="">Du hí Quảng Nam – Làng bích họa – Tượng đài Mẹ Thứ</a>
+					</div>
+					<hr>
+					<div class="xem1">
+						<p>4</p>
+						<a href="">Du hí Quảng Nam – Thánh địa Mỹ Sơn</a>
+					</div>
+					<hr>
+					<div class="xem1">
+						<p>5</p>
+						<a href="">Share full code website tin tức sử dụng wordpress</a>
+					</div>
+					<hr>
+					<div class="xem1">
+						<p>6</p>
+						<a href="">Share full code web shop, web bán hàng sử dụng wordpress</a>
+					</div>
+					<hr>
+					<div class="xem1">
+						<p>7</p>
+						<a href="">Những câu hỏi thường gặp khi đi phỏng vấn lập trình php</a>
+					</div>
+					<hr>
+					<div class="xem1">
+						<p>8</p>
+						<a href="">10 đoạn code đếm ngược sử dụng script cực đẹp, miễn phí</a>
+					</div>
+					<hr>
+				</div>
+				<div class="quangcao">
+					<h4>QUẢNG CÁO</h4>
+					<div class="slimg">
+						<img id="imgch"  src="fileimge/hoanghon.jpg" >
+						<img id="imgch"  src="fileimge/honaghon2.jpg" style="display:none">
+						<img id="imgch"  src="fileimge/galaxy.jpg" style="display:none">
+						<img id="imgch"  src="fileimge/hoanghon3.jpg" style="display:none">
+					</div>
+				</div>
+				<div class="banbe">
+					<h4>BẠN BÈ </h4>
+					<a href=""> &#62; NGỌC ÉNG </a>
+					<a href=""> &#62; MEW</a>
+				</div>
+				<div class="fb">
+					<h4>FACEBOOK </h4>
+					<img src="fileimge/meo.jpg" />
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="bg"></div>
+			<div class="gthieu">
+				<div class="vetoi">
+					<h4>VỀ TÔI</h4>
+					<hr>
+					<p>Tốt nghiệp ĐH Sư Phạm nhưng tôi lại thích lập trình và thiết kê web, vì vậy tôi tạo ra trang web này để trao đổi kiến thức về lập trình và thiết kế web</p>
+					<a href="">Xem thêm </a>
+				</div>
+				<div class="cm">
+					<h4>CHUYÊN MỤC </h4>
+					<hr>
+					<a href="">	>> Lập trình</a>
+					<a href="">	>> Thiết kế Web</a>
+					<a href="">	>> Học WordPress</a>
+					<a href="">	>> Học HTML và CSS</a>
+					<a href="">	>> Video hướng dẫn</a>
+					<a href="">	>> Kiến thức khác</a>
+				</div>
+				<div class="lienhe">
+					<h4>LIÊN HỆ </h4>
+					<hr>
+					<p>Địa chỉ: 128A- Đường Hồ Tùng Mậu- Cầu Giây- Hà Nội</p>
+					<p>Email:ngoceng@gmail.com</p>
+					<p>Điện thoại: 0123475845</p>
+					<p>Website:http://NgocEng.com</p>
+				</div>
+			</div>
+			<div class="bgcuoi">
+				<p>Bản quyền thuộc về Ngọc Éng </p>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
