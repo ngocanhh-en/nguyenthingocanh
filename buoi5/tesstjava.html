@@ -107,41 +107,46 @@
 	 		{
 	 			document.write("Bạn bị hạng C");
 	 		}
-	 		else
+	 		else if (dtb <5 && dtb >=0 )
 	 		{
 	 			document.write("Bạn bi hạng F ");
 	 		}
 
  		}
  	
- 	*/	
+*/
 
 
 	//Bài 3:
 		var sophut=+(window.prompt("Nhập số phút:"));
-		var tong;
-		var phi=0;
-		var phicd =1000;
-		if(sophut<50)
+		var phi=1000;
+		
+		if(sophut==0)
 		{
-			phi=(sophut*600)+1000;
+			document.write("Bạn ko cần trả phí");
+		}
+		else if(sophut<50)
+		{
+			phi=(sophut*600)+phi;
 			document.write("Bạn phải trả " + phi +"đ");
 		}
 		else if(sophut >50 && sophut <200)
 		{
-			phi=(sophut*400)+(sophut*600)+1000;
+			phi=(((sophut-50)*400)+(50*600)+phi);
 			document.write("Bạn phải trả" + phi + "đ");
 		}
 		else if(sophut >200)
 		{
-			phi=(sophut*200)+1000;
+			phi=((sophut-200)*200)+(50*600)+(150*400)+1000;
 			document.write("Bạn phải trả" + phi + "đ");
 		}
 		else
 		{
-			document.write("Phí bắt buộc " + phicd +"đ");
+			document.write("Xin mời nhập lại");
 		}
+
+		
 
  </script>
  	
-</html>>
+</html>
