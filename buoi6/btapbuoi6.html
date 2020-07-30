@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bai tap buoi 6 </title>
+	<link rel="stylesheet" href="D:\JAVAWEB2007E\btap.css">
+	<script type="text/javascript" src="F:\esclipse\jq\jquery-3.5.1.min.js"></script>
+</head>
+<body></body>
+<script >
+	//regex:
+	var a=window.prompt("Mời bạn nhập mật khẩu");
+	//var regex=/^[a-z0-9]{6}$/;
+	var regex=/^.{6,}$/; //ít nhất 6 ký tự //.-khớp vs bất kỳ ký tự nào 
+	//var regex=/^(?=.*[0-9])/;		// 1 ký tự là số ?-xuất hiện = hoặc 1 lần 
+	//var regex= /^([A-Z]{6,})$/   //Bắt đầu = chữ cái in hoa
+	if(regex.test(a))
+	{
+		document.write("Thành công !");
+	}
+	else
+	{
+		document.write("Thất bại, xin mời nhập lại");
+	}
+	
+
+	/*
+	var mang=[3, 29, 23, 24, 9, 63, 88, 2, 4];
+	var a=window.prompt("Nhập số cần xóa:");
+	
+	*/
+
+/* Min, max của mảng 2 chiều 
+	var a=[];
+	a[0] = [35, 78, 33, 1];
+    a[1] = [9, 104, 22, 74];
+    a[2] = [155, 75, 23, 44];
+    a[3] = [42, 44, 8, 100];
+    var max=a[0][0];
+    var min=a[0][0];
+    for (var i=0; i<a.length; i++)
+    {
+    	for(var j=0; j<a.length; j++)
+    	{
+    		if(max < a[i][j])
+    		{
+    			max=a[i][j];
+    		}
+    		if(min> a[i][j])
+    		{
+    			min=a[i][j];
+    		}
+    	}
+    }
+    document.write("Số lớn nhất là:",max );
+    document.write("<br>");
+    document.write("Số nhỏ nhât là:",min);
+   */
+</script>
+</html>
