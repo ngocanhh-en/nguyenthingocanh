@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đồng hồ </title>
+	<script type="text/javascript" src="F:\esclipse\jq\jquery-3.5.1.min.js"></script>
+	<style>
+		.clock 
+		{
+		    width: 800px;
+		    margin: 0 auto;
+		    padding: 30px;
+		    border: 1px solid #333;
+		    color: black;
+		    background-color: #FFA07A;
+		}
+		ul 
+		{
+		    width: 800px;
+		    margin: 0 auto;
+		    padding: 0px;
+		    list-style: none;
+		    text-align: center;
+		} 
+		ul li 
+		{
+		    display: inline;
+		    font-size: 10em;
+		    text-align: center;
+		    font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+		    text-shadow: 0 0 5px black;
+		}
+		#point 
+		{	
+		    position: relative;
+		    padding-left: 10px;
+		    padding-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="clock">
+		  <ul>
+		      <li id="hours"></li>
+		      <li id="point">:</li>
+		      <li id="min"></li>
+		      <li id="point">:</li>
+		      <li id="sec"></li>
+		  </ul>
+	</div>
+	<script>
+		$(document).ready(function() 
+		{
+			setInterval( function() 
+			{
+			    // lay gia tri giay trong doi tuong Date()
+			    var seconds = new Date().getSeconds();
+			    // Chen so 0 vao dang truoc gia tri giay
+			    $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+			},1000);
+			 
+			setInterval( function() 
+			{
+			    // Tuong tu lay gia tri phut
+			    var minutes = new Date().getMinutes();
+			    // Chen so 0 vao dang truoc gia tri phut neu gia tri hien tai nho hon 10
+			    $("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
+			},1000);
+			 
+			setInterval( function() 
+			{
+			    // Lay gia tri gio hien tai
+			    var hours = new Date().getHours();
+			    // Chen so 0 vao truoc gia tri gio neu gia tri nho hon 10
+			    $("#hours").html(( hours < 10 ? "0" : "" ) + hours);
+			}, 1000);
+		});
+	</script>
+</body>
+</html>
