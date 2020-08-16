@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thuc hanh Boostrap </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<style>
+	.container-fluid-gray
+	{
+		height:200px; 
+		background-color: #DCDCDC;
+		text-align: center;
+		padding-top:40px;
+	}
+	.img 
+	{
+		height:200px; 
+		background-color: #C0C0C0;
+	}
+	.nav-pills .nav-link
+	{
+		border-radius: .25em
+	}
+	.nav-link
+	{
+	
+		padding:10px;
+	}
+	li
+	{
+		display:list-item;
+		width:100%;
+	}
+	a
+	{
+		text-decoration: none;
+	}
+	.row
+	{
+		display: flex;
+	}
+	.container-fluid
+	{
+		height:150px; 
+		background-color: #DCDCDC;
+		text-align: center;
+		padding-top:50px;
+	}
+</style>
+<body>
+	<div class="container-fluid-gray">
+		<h1>My First Bootstrap 4 Page</h1>
+		<p>Resize this reposive page to see effect!</p>
+	</div>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		  <!-- Brand -->
+		  <a class="navbar-brand" href="#">Navbar</a>
+		  
+		  <!-- Links -->
+		  <ul class="navbar-nav">
+		    <li class="nav-item">
+		      <a class="nav-link" href="#">Link 1</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="#">Link 2</a>
+		    </li>
+
+		    <!-- Dropdown -->
+		    <li class="nav-item dropdown">
+		      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+		        Dropdown link
+		      </a>
+		      <div class="dropdown-menu">
+		        <a class="dropdown-item" href="#">Link 1</a>
+		        <a class="dropdown-item" href="#">Link 2</a>
+		        <a class="dropdown-item" href="#">Link 3</a>
+		      </div>
+		    </li>
+		  </ul>
+	</nav>
+	<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+			<h2>ABOUT ME</h2>
+			<h4>Photo of me:</h4>
+			<div class="img">FAKE IMG</div>
+			<p>Some text about me in culpa qui offcia deserunt mollit anim...</p>
+			<h3>SOME LINK</h3>
+			<p>Lorem ipsum dolor sit ame</p>
+			<ul class="nav nav-pills flex-colum">
+				<li class="nav-item "><a href="#" class="nav-link active">Active</a></li>
+				<li class="nav-item "><a href="#" class="nav-link ">Link</a></li>
+				<li class="nav-item "><a href="#" class="nav-link ">Link</a></li>
+				<li class="nav-item "><a href="#" class="nav-link disabled">Disable</a></li>
+
+			</ul>
+			<hr class="d-sm-none">
+		</div>
+		
+		<div class="col-sm-8">
+			<h2>TITLE HEADING</h2>
+			<h4>Title description, Dec 7, 2017</h4>
+			<div class="img">Fake IMG </div>
+			<p>Some text...</p>
+			<p>Sunt in culpa qui offcia deserunt mollit anim id est laborum consectetur adpiscing elit, sed do qiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veiam, quis nostrud exerciation ullamco</p>
+			<h2>TITLE HEADING </h2>
+			<h4>Tiltle description, Sep 2, 2018</h4>
+			<div class="img">Fake Img</div>
+			<p>Some text...</p>
+			<p>Sunt in culpa qui officia deserunt mollit anim id est laborum cosectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerciation ullamco</p>
+		</div>
+	</div>
+	</div>
+	<div class="container-fluid">Foorter</div>
+</body>
+</html>
