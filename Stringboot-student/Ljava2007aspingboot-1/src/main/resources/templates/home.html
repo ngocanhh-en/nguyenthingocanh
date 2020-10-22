@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{css/home.css}" />
+<script type="text/javascript" src="js/home.js"></script>
+</head>
+<body>
+<!-- 
+	<h1>Ten trang chu <span th:text="#{trangchu.name}"></span></h1>
+	<p class="welcome">Hello</p>
+	<h1 th:text="${hello}"></h1>
+	<!-- $: lay ten bien  tu en server gui ve
+
+	<hr/>
+	<!-- for-each 
+	<table >
+		<th>
+			<td>id</td>
+			<td>name</td>
+		</th>
+		<tr th:each="student : ${liststudent}"> <!-- student la bien tam, -->
+			<td th:text="${student.id}"></td>
+			<td th:text="${student.name}"></td>
+		</tr>
+	</table>
+	
+	<hr/>
+	<!-- if-else 
+	<h1>Gioi tinh cua toi: 
+		<span th:if="${gender} == 'F'">Female</span>
+		<span th:unless="${gender} == 'F'">Male</span>
+	</h1>
+	
+	<hr/>
+	
+	<form th:action="@{/submitStudent}" th:object="${student}"method="post">
+		<table border="1px">
+			<tr>
+				<td>ID</td>
+				<td><input type="text" th:field="*{id}" name="id" id="id"/></td>
+			</tr>
+			<tr>
+				<td>name</td>
+				<td><input type="text" th:field="*{name}" name="name" id="name"/></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="tao moi"/></td>
+			</tr>
+		</table>
+	</form>-->
+	
+	<hr/>
+	<h1>Them, Sua, Xoa Sudent:</h1>
+	<form >
+		<table border="1px">
+			    <tr>
+			      <th>Id</th>
+			      <th>Name</th>
+			      <th>View</th>
+			      <th>Edit</th>
+			      <th>Delete</th>
+			    </tr>
+			  
+			      <tr th:each="student : ${liststudent}">
+			        <td><p th:text="${student.id}"></p></td>
+			        <td><p th:text="${student.name}"></p></td>
+			        <td><a th:href="@{viewStudent/} + ${student.id}">View</a></td>
+			        <td><a th:href="@{updateStudent/} + ${student.id}">Edit</a></td>
+			        <td><a th:href="@{deleteStudent/} + ${student.id}">Delete</a></td>
+			      </tr>
+			  	
+		</table>
+	</form>
+</body>
+</html>
